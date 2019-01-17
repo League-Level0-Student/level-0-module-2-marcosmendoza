@@ -18,8 +18,10 @@ public class SafeCracker {
 		 * Your mission: use the tryCode method to crack the safe by trying all possible
 		 * combinations
 		 */
-		
-
+		tryCode(1);
+		for(int i=0;i<1000000000;i++) {
+			tryCode(i);
+		}
 	}
 
 	static void tryCode(int guess) {
@@ -28,7 +30,7 @@ public class SafeCracker {
 		int secretCode = 9999999 - wekncrzpasfdkjhcfjse;
 
 		if (guess == secretCode) {
-			JOptionPane.showMessageDialog(null, "Congratulations! You cracked the safe with " + guess);
+			JOptionPane.showMessageDialog(null, "Congratulations! You cracked the safe with 9999969!" + guess);
 			playTheSoundOfSuccess();
 			System.exit(0);
 		}
@@ -38,7 +40,7 @@ public class SafeCracker {
 		try {
 			AudioClip sound = JApplet.newAudioClip(SafeCracker.class.getResource("me-gusta.wav"));
 			sound.play();
-			Thread.sleep(3400);
+	   		Thread.sleep(3400);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
